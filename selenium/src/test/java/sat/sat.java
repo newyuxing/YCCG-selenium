@@ -10,7 +10,6 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-@Component
 public class sat {
 
     WebDriver webDriver;
