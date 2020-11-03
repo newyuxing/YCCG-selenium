@@ -6,6 +6,8 @@ import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.*;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
 
@@ -44,7 +46,7 @@ public class TestNGDemo {
 
         //启动谷歌浏览器
         @Test
-        public void openChrome() throws IOException, InterruptedException {
+        public void openChrome() throws IOException, InterruptedException, AWTException {
             //设置chromedriver路径
             System.setProperty("webdriver.chrome.driver","drivers/chromedriver.exe");
             WebDriver webDriver = new ChromeDriver();
@@ -87,6 +89,16 @@ public class TestNGDemo {
             Thread.sleep(1000);
             select.selectByVisibleText("vivo");//根据文本值
 
+
+            Robot robot = new Robot();
+            robot.keyPress(KeyEvent.VK_TAB);
+//            robot.keyRelease();
+
+            try {
+                Class.forName("");
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
         }
 
 
